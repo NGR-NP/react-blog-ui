@@ -1,0 +1,13 @@
+.posts{
+    flex: 9;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 10px 0 10px;
+
+}
+@media screen and (max-width: 500px) {
+    .posts{
+        flex-direction: column;
+    }
+    
+  }

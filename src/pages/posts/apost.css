@@ -1,0 +1,10 @@
+.aDiv {
+    display: flex;
+    
+  }
+  @media only screen and (max-width: 500px) {
+    .aDiv{
+      flex-direction: column;
+      margin: 10px;
+    }
+  }

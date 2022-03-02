@@ -1,0 +1,12 @@
+.single{
+    flex: 9;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 500px) {
+    .single{
+        flex-direction: column;
+    }
+    
+  }

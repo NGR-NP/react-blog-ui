@@ -1,0 +1,139 @@
+
+.post {
+  width: 385px;
+  margin: 0px 25px 40px 25px;
+  display: flex;
+  flex-direction: column;
+}
+.postCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  padding-bottom: 1rem;
+  box-shadow: var(--boxShadow);
+  padding: 1rem 12px;
+}
+@media only screen and (max-width: 1150px){
+  .post{
+    width: auto;
+  }
+}
+@media only screen and (max-width: 500px){
+  .post{
+    width: 100%;
+    margin: 0 0 40px 0;
+  }
+}
+.postImg {
+  height: 280px;
+  object-fit: cover;
+  /* margin: 10px; */
+  border-radius: 12px;
+
+}
+/* .postImg:hover{
+  transform: scale(1.1);
+} */
+
+.postInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postCat {
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--lightGold);
+  line-height: 19px;
+  margin-top: 15px;
+  /* margin-right: 10px; */
+  cursor: pointer;
+  padding: 0 12px;
+
+}
+
+.postTitle {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.postDate {
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 400;
+  color: #999999;
+  margin-top: 15px;
+}
+
+.postDesc {
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--lBlack);
+  margin-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.mRB{
+  width: 100%;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.button {
+  align-items: center;
+  appearance: none;
+  background-image: var(--readMoreButton);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 42px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 15px;
+}
+
+.button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}

@@ -1,0 +1,105 @@
+.sidebar {
+  flex: 3;
+  height: fit-content;
+  margin: 20px;
+  padding-bottom: 45px;
+  background-color: #fdfbfb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--lightlinegradient);
+  box-shadow: var(--boxShadow);
+
+  
+}
+
+.sidebarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 13px;
+}
+
+.sidebarTitle {
+  margin: 10px;
+  padding: 15px;
+  width: 80%;
+  border-top: solid 1px #cbb9b9;
+  border-bottom: solid 1px #cbb9b9;
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+  font-size: 12px;
+  line-height: 19px;
+  color: #363434;
+  font-weight: 600;
+}
+
+.sidebarItem > img {
+  margin-top: 15px;
+  width: 250px;
+  height: 250px;
+}
+
+.sidebarItem > p {
+  padding: 30px;
+}
+
+.sidebarList {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+
+.sidebarListItem {
+  display: inline-block;
+  width: 50%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.sidebarSocial {
+  margin-top: 15px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socLink{
+  margin-right: 15px;
+}
+.sidebarIcon {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 7px;
+  /* background: linear-gradient(140deg,rgba(128,204,255,.9),rgba(128,204,255,.6) 20%,rgba(234,127,223,.4) 90%); */
+  /* background: radial-gradient(100% 100% at 100% 0, #5adaff 0, #a454ff 100%); */
+  cursor: pointer;
+  box-shadow: var(--boxShadow);
+  transition: all .3s ease-in-out;
+}
+.sIFb{
+  color: #2153f8;
+}
+.sIIg{
+  color: red;
+}
+.sIDc{
+  color: rgb(34, 71, 235);
+}
+.sITw{
+  color: #2153f8;
+}
+
+.sidebarIcon:focus {
+  box-shadow: #c7cbee 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #c2c5d600 0 -3px 0 inset;
+}
+
+.sidebarIcon:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #b5bae233 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.sidebarIcon:active {
+  box-shadow: #3f414d 0 3px 7px inset;
+  transform: translateY(2px);
+}
