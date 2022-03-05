@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./topbar.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useState } from "react";
 
@@ -32,15 +32,13 @@ transition: all 0.2s;
 const HandburgerBtn = styled.button`
 position: relative;
 background-color: transparent;
-width: 2.5rem;
-height: 20px;
-margin-top: 0rem;
+
 transition: all 0.3s;
 cursor: pointer;
 display: none;
 border: none;
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 800px){
     display: inline-block;
 }
 &::before,
@@ -51,7 +49,6 @@ border: none;
   height: 2px;
   display: inline-block;
   position: absolute;
-  left: 0;
   cursor: pointer;
 
   transition: all 0.3s;
@@ -90,44 +87,66 @@ a {
   margin: 1.5rem;
   cursor: pointer;
 }
+// @media only screen and (max-width: 800px){
+// display:none;}
 `;
 
 export default function Topbar() {
-  // const user = true;
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
   return (
-    <div className="top" id="navTop">
+    <div className="top" id="top">
+
       <div className="topLeft">
         <i className="topIcon fab fa-facebook-square"></i>
         <i className="topIcon fab fa-instagram-square"></i>
         <i className="topIcon fab fa-pinterest-square"></i>
         <i className="topIcon fab fa-twitter-square"></i>
       </div>
-      <div className="topRight">
+      <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
             <Link className="link" to="/">
               HOME
             </Link>
           </li>
-          <li className="topListItem"><Link className="link" to="/posts/" onClick={() => handleClick()}>
+          <li className="topListItem"><Link className="link" to="/posts/" >
             BLOGS
           </Link></li>
-          <li className="topListItem"><Link className="link" to="/#top" onClick={() => handleClick()}>
+          <li className="topListItem"><Link className="link" to="/#top" >
             CONTACT
           </Link></li>
         </ul>
+
+      </div>
+
+      <div className="topRight">
+
+        <div className="topRight1">
+          <div className="rMain">
+            <label htmlFor="searchN">
+              <i className="topSearchIcon fas fa-search"></i>
+            </label>
+            <input className="searchB" type="search" id="searchN" placeholder="serch" />
+          </div>
+
+        </div>
         <HandburgerBtn onClick={() => handleClick()} clicked={click}>
           <span />
         </HandburgerBtn>
         <MobileMenu clicked={click}>
+          <div className="rMain">
+            <label htmlFor="searchN">
+              <i className="topSearchIcon fas fa-search"></i>
+            </label>
+            <input className="searchB" type="search" id="searchN" placeholder="serch" />
+          </div>
           <Link className="link" to="/" onClick={() => handleClick()}>
             HOME
           </Link>
-          <Link className="link" to="/posts/" onClick={() => handleClick()}>
+          <Link className="link" to="/blogs/" onClick={() => handleClick()}>
             BLOGS
           </Link>
           <Link className="link" to="/contact" onClick={() => handleClick()}>
@@ -135,14 +154,6 @@ export default function Topbar() {
           </Link>
         </MobileMenu>
       </div>
-      <div className="search">
-        <input className="searchB" type="search" placeholder="serch" />
-        <button className="btn" arina-label="itsourshop.store/shop" onClick={() => { navigate("") }} >
-          <i className="topSearchIcon fas fa-search"></i>
-        </button>
-        <Link className="link" to="/posts?cat=Music" />
-      </div>
-
     </div>
   );
 }

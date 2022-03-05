@@ -9,6 +9,10 @@ import { Route, Routes } from "react-router-dom";
 import Aposts from "./pages/posts/Aposts";
 import { GlobalStyle } from "./globalStyle";
 import React from 'react'
+import ScrollButton from "./components/scrolltotop/ScrollButton";
+
+
+
 
 function App() {
 
@@ -16,16 +20,17 @@ function App() {
     <div>
       <Topbar />
       <GlobalStyle />
-      <Routes>
+      <Routes >
         <Route exact path="/" element={<Homepage />} />
-        <Route path="/posts" element={<Aposts />} />
-        <Route path="/post/" element={<Single />} />
+        <Route path="/blogs" element={<Aposts />} />
+        <Route path="/blog/" element={<Single />} />
         {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/register" element={<Register />} /> */}
 
         {/* <Route path="/write" element={<Login />} /> */}
         {/* <Route path="/settings" element={<Login />} /> */}
       </Routes >
+      <ScrollButton />
     </div>
   );
 }
