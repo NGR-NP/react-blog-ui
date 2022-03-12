@@ -33,7 +33,6 @@ const HandburgerBtn = styled.button`
 position: relative;
 background-color: transparent;
 width: 2.5rem;
-height: 20px;
 margin-top: 0rem;
 transition: all 0.3s;
 cursor: pointer;
