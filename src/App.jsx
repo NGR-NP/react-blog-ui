@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Aposts from "./pages/posts/Aposts";
 import { GlobalStyle } from "./globalStyle";
 import React from 'react'
+import Sctt from './components/scrooltotop/sctt';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <div>
       <Topbar />
       <GlobalStyle />
+      <Sctt/>
       <Routes>
         <Route exact path="/" element={<Homepage />} />
         <Route path="/posts" element={<Aposts />} />

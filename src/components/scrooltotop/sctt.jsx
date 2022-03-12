@@ -1,76 +1,51 @@
-import SvgIcon from "../../assets/svg/arrow-up.svg";
+import React, {useState} from 'react';
+import {FaArrowCircleUp} from 'react-icons/fa';
+import styled from 'styled-components';
 
-import styled from "styled-components";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React from 'react'
-
-export const Up = styled.div`
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: rgba(0, 0, 0, 0.65);
-  font-size: 14px;
-  line-height: 1.5715;
-  list-style: none;
-  position: fixed;
-  right: 100px;
-  bottom: 80px;
-  z-index: 10;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  @media screen and (max-width: 48em) {
-    display: none;
-  }
-  img {
-    width: 3rem;
-    height: 3rem;
-    border: 2px solid var(--white);
-    border-radius: 50%;
-    background-color: var(--white);
-    transition: transform 0.3s;
-    display: none;
-    &:hover {
-      transform: scale(1.2);
-    }
-    &:active {
-      transform: scale(0.9);
-    }
-  }
+  
+const Button = styled.div`
+   position: fixed; 
+   left: 94%;
+   bottom: 49px;
+   height: 20px;
+   font-size: 3rem;
+   z-index: 1;
+   cursor: pointer;
+   color: green;
+   margin: 0 0 0 -32px;
 `;
 
-const ScrollToTop = () => {
-  const ref = useRef(null);
-  gsap.registerPlugin(ScrollTrigger);
-
-  const scrollUp = () => {
-    const element = document.getElementById("home");
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
+const ScrollButton = () =>{
+  
+  const [visible, setVisible] = useState(false)
+  
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 500){
+      setVisible(true)
+    } 
+    else if (scrolled <= 500){
+      setVisible(false)
+    }
   };
 
-  useEffect(() => {
-    const element = ref.current;
-    gsap.to(element, {
-      display: "block",
-      scrollTrigger: {
-        trigger: element,
-        start: "top top",
-        scrub: true,
-      },
+  
+  const scrollToTop = () =>{
+    window.scrollTo({
+      top: 0, 
+      behavior: 'smooth'
+      
     });
-  }, []);
-
+  };
+  
+  window.addEventListener('scroll', toggleVisible);
+  
   return (
-    <Up onClick={scrollUp}>
-      <img ref={ref} src={SvgIcon} alt="to top" />
-    </Up>
+    <Button>
+     <FaArrowCircleUp onClick={scrollToTop} 
+      style={{display: visible ? 'inline' : 'none'}} />
+    </Button>
   );
-};
-
-export default ScrollToTop;
+}
+  
+export default ScrollButton;

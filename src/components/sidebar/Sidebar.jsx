@@ -19,33 +19,23 @@ export default function Sidebar() {
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Life">
-              Life
+            <Link className="link" to="/posts?cat=Linux">
+              Linux
             </Link>
           </li>
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Music">
-              Music
+            <Link className="link" to="/posts?cat=Web-Developement">
+              Web Dev
             </Link>
           </li>
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Sport">
-              Sport
+            <Link className="link" to="/posts?cat=Networking">
+              Networking
             </Link>
           </li>
           <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Style">
-              Style
-            </Link>
-          </li>
-          <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Tech">
-              Tech
-            </Link>
-          </li>
-          <li className="sidebarListItem">
-            <Link className="link" to="/posts?cat=Cinema">
-              Cinema
+            <Link className="link" to="/posts?cat=Tips-Tricks">
+              Tips & Tricks
             </Link>
           </li>
         </ul>
@@ -53,10 +43,18 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">SOCIAL MEDIA</span>
         <div className="sidebarSocial">
-          <Link className="socLink" to="https://fb.com/ngr-nep"><i className="sidebarIcon sIFb fab fa-facebook-square"></i></Link>
-          <Link className="socLink" to="#"><i className="sidebarIcon sIIg fab fa-instagram-square"></i></Link>
-          <Link className="socLink" to="https://fb.com"><i className="sidebarIcon sIDc fab fa-discord"></i></Link>
-          <Link className="socLink" to="https://fb.com"><i className="sidebarIcon sITw fab fa-twitter-square"></i></Link>
+          <a  href="https://fb.com/ngr-nep" className="socLink" target="_blank" rel="noreferrer" >
+            <i className="sidebarIcon sIFb fab fa-facebook-square"></i>
+          </a>
+          <a  href="https://instagram.com" className="socLink" target="_blank" rel="noreferrer">
+            <i className="sidebarIcon sIIg fab fa-instagram-square"></i>
+          </a>
+          <a  href="https://fb.com" className="socLink" target="_blank" rel="noreferrer">
+            <i className="sidebarIcon sIDc fab fa-discord"></i>
+          </a>
+          <a  href="https://fb.com" className="socLink" target="_blank" rel="noreferrer">
+            <i className="sidebarIcon sITw fab fa-twitter-square"></i>
+          </a>
         </div>
       </div>
     </div>

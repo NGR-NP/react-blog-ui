@@ -113,10 +113,10 @@ export default function Topbar() {
               HOME
             </Link>
           </li>
-          <li className="topListItem"><Link className="link" to="/posts/" onClick={() => handleClick()}>
+          <li className="topListItem"><Link className="link" to="/posts/">
             BLOGS
           </Link></li>
-          <li className="topListItem"><Link className="link" to="/#top" onClick={() => handleClick()}>
+          <li className="topListItem"><Link className="link" to="/" >
             CONTACT
           </Link></li>
         </ul>
@@ -130,17 +130,16 @@ export default function Topbar() {
           <Link className="link" to="/posts/" onClick={() => handleClick()}>
             BLOGS
           </Link>
-          <Link className="link" to="/contact" onClick={() => handleClick()}>
+          <Link className="link" to="/" onClick={() => handleClick()}>
             <Button>CONTACT ME</Button>
           </Link>
         </MobileMenu>
       </div>
       <div className="search">
         <input className="searchB" type="search" placeholder="serch" />
-        <button className="btn" arina-label="itsourshop.store/shop" onClick={() => { navigate("") }} >
+        <button className="btn" arina-label="search" onClick={() => { navigate("") }} >
           <i className="topSearchIcon fas fa-search"></i>
         </button>
-        <Link className="link" to="/posts?cat=Music" />
       </div>
 
     </div>
