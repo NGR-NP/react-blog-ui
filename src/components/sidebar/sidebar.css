@@ -10,8 +10,6 @@
   align-items: center;
   background: var(--lightlinegradient);
   box-shadow: var(--boxShadow);
-
-  
 }
 
 .sidebarItem {
@@ -78,10 +76,10 @@
   transition: all .3s ease-in-out;
 }
 .sIFb{
-  color: #2153f8;
+  color: #009245;
 }
 .sIIg{
-  color: red;
+  color: #fcee21;
 }
 .sIDc{
   color: rgb(34, 71, 235);
